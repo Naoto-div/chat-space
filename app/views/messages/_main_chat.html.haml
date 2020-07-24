@@ -14,7 +14,8 @@
       .chat-main__send-message__messages__message-input
         %input.chat-main__send-message__messages__message-input__type-message
         %label{class: "chat-main__send-message__messages__message-input__send-image"}
-          = icon('fas', 'image')
+          = link_to '#' do
+            = fa_icon 'image'
           %input{class: "chat-main__send-message__messages__message-input__send-image__none" ,type: "file"}
       %input.chat-main__send-message__messages__send-button{type: "submit" ,value: "Send"}
         
