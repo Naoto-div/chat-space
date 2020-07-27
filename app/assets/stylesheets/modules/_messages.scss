@@ -98,11 +98,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        &__font{
-          font-size: 16px;
-          color:#38aef0;
-          margin:28px 20px 28px 20px;
-        }
+        font-size: 16px;
+        color:#38aef0;
+        margin:28px 20px 28px 20px;
+        border: 1px solid;
+        text-decoration: none;
       }
     }
     &__message-list{
@@ -142,6 +142,7 @@
             height:100%;
             border: none;
             outline: none;
+            padding-left: 5px;
           }
           &__send-image{
             position: absolute;
