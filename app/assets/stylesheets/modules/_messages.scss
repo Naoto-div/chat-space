@@ -25,7 +25,7 @@
         width: 260px;
         background-color: #2f3e51;
         &__name{
-          color: #ffffff;
+          color: var(--main-bg-color);
           height: 20px;
           display:inline-block;
         } 
@@ -36,19 +36,19 @@
           text-align: right;
           &__posts{
             height: 20px;
-            color: #ffffff;
+            color: var(--main-bg-color);
             display: inline-block; 
             a{
-              color:#ffffff;
+              color: var(--main-bg-color);
             }
           }
           &__config{
             margin-left: 5px;
             height: 20px;
-            color:#ffffff;
+            color: var(--main-bg-color);
             display: inline-block;
             a{
-              color:#ffffff;
+              color: var(--main-bg-color);
             }
           }
         }
@@ -76,7 +76,7 @@
     &__info{
       width:calc(100vw - 300px);
       height: 100px;
-      background-color:#ffffff;
+      background-color:var(--main-bg-color);
       display: flex;
       justify-content: space-between;
       &__names{
