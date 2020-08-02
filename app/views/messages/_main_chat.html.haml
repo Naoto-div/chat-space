@@ -1,0 +1,20 @@
+.chat-main
+  .chat-main__info
+    .chat-main__info__names
+      %p.chat-main__info__names__groupe aaa
+      %p.chat-main__info__names__name aaa
+    = link_to 'Edit', class: "chat-main__info__edit" 
+  .chat-main__message-list
+    .chat-main__message-list__messages
+      %p.chat-main__message-list__messages__name aaa
+      %p.chat-main__message-list__messages__content aaa
+  .chat-main__send-message
+    .chat-main__send-message__messages
+      .chat-main__send-message__messages__message-input
+        %input.chat-main__send-message__messages__message-input__type-message{:placeholder => "type a message",}
+        %label.chat-main__send-message__messages__message-input__send-image
+          = link_to '#' do
+            = fa_icon 'image'
+          %input.chat-main__send-message__messages__message-input__send-image__none{type: "file"}
+      %input.chat-main__send-message__messages__send-button{type: "submit" ,value: "Send"}
+        
