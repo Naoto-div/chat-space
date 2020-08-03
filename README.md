@@ -12,7 +12,7 @@
 - belongs_to :user
 
 
-## userテーブル
+## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -23,7 +23,7 @@
 - has_many :groups, throuth: :groups_users
 - has_many :posts
 
-## groupテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
