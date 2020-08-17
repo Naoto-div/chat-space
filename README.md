@@ -17,7 +17,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, foreign_key: true|
-|email|varchar|null: false, foreign_key: true|
+|email|string|null: false, foreign_key: true|
 
 ### Association
 - has_many :groups, throuth: :groups_users
@@ -27,7 +27,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, foreign_key: true|
+|name|string|null: false, foreign_key: true|
 
 ### Association
 - has_many :users, throuth: :groups_users
