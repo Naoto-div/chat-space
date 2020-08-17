@@ -36,7 +36,7 @@
 - has_many :users, throuth: :groups_users
 - has_many :posts
 
-## postテーブル
+## postsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
