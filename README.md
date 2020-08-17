@@ -18,6 +18,7 @@
 |------|----|-------|
 |name|string|null: false, foreign_key: true|
 |email|string|null: false, foreign_key: true|
+|password|string|null: false, foreign_key: true|
 
 ### Association
 - has_many :groups, throuth: :groups_users
