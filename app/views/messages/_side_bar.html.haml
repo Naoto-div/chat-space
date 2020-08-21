@@ -2,12 +2,13 @@
   .sidebar-name
     .sidebar-name__top-item
       %p.sidebar-name__top-item__name test
+        = current_user.name
       .sidebar-name__top-item__icon
         .sidebar-name__top-item__icon__posts
           = link_to '#'  do
             = fa_icon 'edit'
         .sidebar-name__top-item__icon__config
-          = link_to '#' do
+          = link_to edit_user_path(current_user) do
             = fa_icon 'cog'
   .sidebar-talklist
     .sidebar-talklist__contents
