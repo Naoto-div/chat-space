@@ -13,8 +13,8 @@
   .sidebar-talklist
     - current_user.groups.each do |group|
       .sidebar-talklist__contents
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .sidebar-talklist__contents__groupe
             = group.name
           .sidebar-talklist__contents__message
-            メッセージはまだありません
+            = group.show_last_message

@@ -1,20 +1,19 @@
 .chat-main
   .chat-main__info
     .chat-main__info__names
-      %p.chat-main__info__names__groupe aaa
-      %p.chat-main__info__names__name aaa
+      %p.chat-main__info__names__groupe
+        = current_user.messages
+      %p.chat-main__info__names__name
+        = current_user.name
     = link_to 'Edit', class: "chat-main__info__edit" 
   .chat-main__message-list
-    .chat-main__message-list__messages
-      %p.chat-main__message-list__messages__name aaa
-      %p.chat-main__message-list__messages__content aaa
+    .MessageField
+      = render @messages 
   .chat-main__send-message
-    .chat-main__send-message__messages
+    = form_with model: [@group, @message], html: {class: "message__messages"}, local: true do |f|
       .chat-main__send-message__messages__message-input
-        %input.chat-main__send-message__messages__message-input__type-message{:placeholder => "type a message",}
-        %label.chat-main__send-message__messages__message-input__send-image
-          = link_to '#' do
-            = fa_icon 'image'
-          %input.chat-main__send-message__messages__message-input__send-image__none{type: "file"}
-      %input.chat-main__send-message__messages__send-button{type: "submit" ,value: "Send"}
-        
+        = f.text_field :content, class: 'chat-main__send-message__messages__message-input__type-message', placeholder: 'type a message'
+        = f.label :image, class: 'chat-main__send-message__messages__message-input__send-image' do
+          = icon('far', 'image', class: 'Form__icon')
+          = f.file_field :image, class: 'chat-main__send-message__messages__message-input__send-image__none'
+      = f.submit 'Send', class: 'chat-main__send-message__messages__send-button'
