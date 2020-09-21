@@ -2,13 +2,15 @@
   .chat-main__info
     .chat-main__info__names
       %p.chat-main__info__names__groupe
-        = current_user.messages
-      %p.chat-main__info__names__name
-        = current_user.name
-    = link_to 'Edit', class: "chat-main__info__edit" 
+        = @group.name
+      .chat-main__info__names__name
+        %p= "Member:"
+        - @group.users.each do |user|
+          %p= user.name + ","
+    = link_to "Edit" , edit_group_path(@group) , class: "chat-main__info__edit" 
   .chat-main__message-list
     .MessageField
-      = render @messages 
+      = render @messages
   .chat-main__send-message
     = form_with model: [@group, @message], html: {class: "message__messages"}, local: true do |f|
       .chat-main__send-message__messages__message-input
