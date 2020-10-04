@@ -12,10 +12,9 @@
     .MessageField
       = render @messages
   .chat-main__send-message
-    = form_with model: [@group, @message], html: {class: "message__messages"}, local: true do |f|
-      .chat-main__send-message__messages__message-input
-        = f.text_field :content, class: 'chat-main__send-message__messages__message-input__type-message', placeholder: 'type a message'
-        = f.label :image, class: 'chat-main__send-message__messages__message-input__send-image' do
-          = icon('far', 'image', class: 'Form__icon')
-          = f.file_field :image, class: 'chat-main__send-message__messages__message-input__send-image__none'
-      = f.submit 'Send', class: 'chat-main__send-message__messages__send-button'
+    = form_with model: [@group, @message], html: {class: "messages"}, local: true do |f|
+      = f.text_field :content, class: 'chat-main__send-message__messages__type-message', placeholder: 'type a message'
+      = f.label :image, class: 'chat-main__send-message__messages__type-message__send-image' do
+        = icon('fa', 'image', class: 'Form__icon')
+        = f.file_field :image, class: 'chat-main__send-message__messages__type-message__send-image__none'
+      = f.submit 'Send', class: 'chat-main__send-message__send-button'
